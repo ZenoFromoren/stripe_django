@@ -1,0 +1,15 @@
+services:
+  backend:
+    container_name: stripe_django
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: 'python stripe_project/manage.py runserver 0.0.0.0:8000
+      && stripe_project/manage.py makemigrations
+      && stripe_project/manage.py migrate'
+    image: stripe_django-backend-docker
+    restart: always
+    env_file:
+      - stripe_project/.env
+    ports:
+      - 8000:8000

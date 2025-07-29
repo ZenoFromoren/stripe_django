@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ name }}</title>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
+        <script src="https://js.stripe.com/basil/stripe.js"></script>
+    </head>
+    <body>
+        <main class="main">
+            <div class="content">
+                <img src={{ image }} alt="Изображение {{ name }}" class="image">
+                <div class="content-right">
+                    <h1 class="name">{{ name }}</h1>
+                    <p class="description">{{ description }}</p>
+                    <p class="price">Цена: {{ price }} ₽</p>
+                    <button class="buy-button">Купить</button>
+                </div>
+            </div>
+        </main>
+        <script>
+            const stripe = Stripe('{{ STRIPE_PUBLISHABLE_KEY }}');
+
+            const buyButton = document.querySelector('.buy-button')
+
+            buyButton.addEventListener('click', async () => {
+                const checkout_session_id = (await fetch("{{ BACKEND_DOMAIN }}/buy/{{ id }}").then((res) => res.json())).checkout_session_id
+                
+                stripe.redirectToCheckout({ sessionId: checkout_session_id })
+            })
+        </script>
+    </body>
+</html>

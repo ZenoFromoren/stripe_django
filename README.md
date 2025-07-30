@@ -1,4 +1,4 @@
-# Strpe Django <br></ br>
+# Stripe Django <br /></ br>
 
 ## Установка проекта и зависимостей <br /><br />
 

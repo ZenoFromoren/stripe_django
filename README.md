@@ -3,7 +3,7 @@
 ## Установка проекта и зависимостей <br /><br />
 
 ### Установка проекта
-```https://github.com/ZenoFromoren/stripe_django.git``` <br /><br />
+```git clone https://github.com/ZenoFromoren/stripe_django.git``` <br /><br />
 
 ### Установка зависимостей
 В папке с установленным проектом

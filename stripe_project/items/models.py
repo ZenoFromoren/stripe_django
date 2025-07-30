@@ -6,6 +6,7 @@ class Item(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     image = models.URLField()
+    product_id = models.TextField(null=True)
 
     class Meta:
         db_table = "items"

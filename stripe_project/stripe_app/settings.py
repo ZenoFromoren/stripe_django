@@ -68,7 +68,7 @@ TEMPLATES = [
 ]
 
 STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, "items/static"),
+    os.path.join(BASE_DIR, "items/static"),
 ]
 
 WSGI_APPLICATION = "stripe_app.wsgi.application"

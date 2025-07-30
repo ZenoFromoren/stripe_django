@@ -1,6 +1,11 @@
 from django.contrib import admin
 from django.urls import path
-from items.views import CreateStripeCheckoutSessionView, ItemView, SuccessView, CancelView
+from items.views import (
+    CreateStripeCheckoutSessionView,
+    ItemView,
+    SuccessView,
+    CancelView,
+)
 
 urlpatterns = [
     path("item/<int:pk>/", ItemView.as_view(), name="items"),

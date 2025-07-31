@@ -30,6 +30,8 @@ PAYMENT_CANCEL_URL = env("PAYMENT_CANCEL_URL")
 
 ALLOWED_HOSTS = ["*"]
 
+CSRF_TRUSTED_ORIGINS = ['http://*', 'https://*']
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",

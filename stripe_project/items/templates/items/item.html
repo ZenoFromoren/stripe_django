@@ -25,7 +25,7 @@
             const buyButton = document.querySelector('.buy-button')
 
             buyButton.addEventListener('click', async () => {
-                const checkout_session_id = (await fetch("{{ BACKEND_DOMAIN }}/buy/{{ id }}").then((res) => res.json())).checkout_session_id
+                const checkout_session_id = (await fetch("{{ BACKEND_DOMAIN }}/buy/{{ id }}", { method: 'GET' }).then((res) => res.json())).checkout_session_id
                 
                 stripe.redirectToCheckout({ sessionId: checkout_session_id })
             })

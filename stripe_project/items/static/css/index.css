@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    padding: 50px;
+}
+
+.title {
+    margin-block-end: 2rem;
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-inline-start: 1rem;
+}
+
+.item {
+    color: #26aefc;
+}
+
+.item:hover {
+   text-decoration: underline;
+}
+
+.item-link {
+    text-decoration: none;
+}
+
+.item-link:visited {
+    color: #26aefc;
+    text-decoration: none;
+}

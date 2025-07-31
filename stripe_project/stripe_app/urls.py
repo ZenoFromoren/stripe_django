@@ -5,6 +5,7 @@ from items.views import (
     ItemView,
     SuccessView,
     CancelView,
+    MainView,
 )
 
 urlpatterns = [
@@ -17,4 +18,5 @@ urlpatterns = [
     path("success/", SuccessView.as_view(), name="success"),
     path("cancel/", CancelView.as_view(), name="cancel"),
     path("admin/", admin.site.urls),
+    path("", MainView.as_view(), name="main"),
 ]

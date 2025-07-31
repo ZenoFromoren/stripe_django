@@ -62,3 +62,10 @@ class SuccessView(TemplateView):
 
 class CancelView(TemplateView):
     template_name = "stripe/cancel.html"
+
+
+class MainView(TemplateView):
+    def get(self, request, *args, **kwargs):
+        data = {"items": Item.objects.all(), "BACKEND_DOMAIN": settings.BACKEND_DOMAIN}
+
+        return render(request, "index/index.html", context=data)

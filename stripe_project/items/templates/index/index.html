@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Stripe Django main</title>
+        <link rel="stylesheet" href="{% static 'css/index.css'%}" type="text/css">
+    </head>
+    <body>
+        <main class="main">
+            <h1 class="title">Товары, доступные к покупке</h1>
+            <ol class="list-items">
+                {% for item in items %}
+                    <a href="{{ BACKEND_DOMAIN }}/item/{{ item.id }}" class="item-link">
+                        <li class="item">{{ item.name }}</li>
+                    </a>
+                {% endfor %}
+            </ol>
+        </main>
+    </body>
+</html>

@@ -22,3 +22,12 @@ pip install -r requirements.txt
 В папке `stripe_project` нужно создать файл `.env` по примеру `.env.example`
 
 `python manage.py runserver` <br /><br />
+
+
+## Описание запросов
+
+
+### GET /buy/{id}
+Возвращает `Stripe Session Id` для оплаты продукта с идентификатором `id`
+
+Возвращаемое значение: { checkout_session_id: str }

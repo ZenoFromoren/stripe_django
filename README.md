@@ -8,11 +8,11 @@
 ### Установка зависимостей
 В папке с установленным проектом
 
-`python -m venv venv
+` python -m venv venv
 
 venv/Scripts/activate
 
-pip install -r requirements.txt`
+pip install -r requirements.txt `
 
 ### Запуск проекта
 `cd stripe_project` (из корневой папки)

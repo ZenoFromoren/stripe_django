@@ -6,11 +6,8 @@ from django.shortcuts import render
 from django.forms.models import model_to_dict
 from django.views.generic import TemplateView
 from django.http import JsonResponse
-from django.utils.decorators import method_decorator
-from django.views.decorators.csrf import csrf_exempt 
 
 
-@method_decorator(csrf_exempt, name="dispatch")
 class CreateStripeCheckoutSessionView(View):
     def get(self, request, *args, **kwargs):
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -40,7 +37,6 @@ class CreateStripeCheckoutSessionView(View):
         return JsonResponse({"checkout_session_id": checkout_session["id"]})
 
 
-@method_decorator(csrf_exempt, name="dispatch")
 class ItemView(View):
     def get(self, request, *args, **kwargs):
         item = model_to_dict(Item.objects.get(id=self.kwargs["pk"]))

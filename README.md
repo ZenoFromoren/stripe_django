@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ## Описание запросов
 
 
-### GET /buy/{id}
+### GET `/buy/{id}`
 Возвращает `Stripe Session Id` для оплаты продукта с идентификатором `id`
 
 Возвращаемое значение: `{ checkout_session_id: str }`

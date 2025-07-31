@@ -7,6 +7,8 @@ from items.views import (
     CancelView,
     MainView,
 )
+from orders.views import CreateStripeCheckoutSessionOrderView, OrderView
+
 
 urlpatterns = [
     path("item/<int:pk>/", ItemView.as_view(), name="items"),
@@ -17,6 +19,8 @@ urlpatterns = [
     ),
     path("success/", SuccessView.as_view(), name="success"),
     path("cancel/", CancelView.as_view(), name="cancel"),
+    path("order/<int:pk>/", OrderView.as_view(), name="orders"),
+    path("buy/order/<int:pk>/", CreateStripeCheckoutSessionOrderView.as_view(), name="create-order-checkout-session"),
     path("admin/", admin.site.urls),
     path("", MainView.as_view(), name="main"),
 ]

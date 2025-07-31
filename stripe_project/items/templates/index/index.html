@@ -7,14 +7,26 @@
     </head>
     <body>
         <main class="main">
-            <h1 class="title">Товары, доступные к покупке</h1>
-            <ol class="list-items">
-                {% for item in items %}
-                    <a href="{{ BACKEND_DOMAIN }}/item/{{ item.id }}" class="item-link">
-                        <li class="item">{{ item.name }}</li>
-                    </a>
-                {% endfor %}
-            </ol>
+            <div class="items">
+                <h1 class="title">Товары, доступные к покупке</h1>
+                <ol class="list-ordered">
+                    {% for item in items %}
+                        <a href="{{ BACKEND_DOMAIN }}/item/{{ item.id }}" class="link">
+                            <li class="list-item">{{ item.name }}</li>
+                        </a>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="orders">
+                <h1 class="title">Заказы</h1>
+                <ul class="list-unordered">
+                    {% for order in orders %}
+                        <a href="{{ BACKEND_DOMAIN }}/order/{{ order.id }}" class="link">
+                            <li class="list-item">Заказ {{ order.id }}</li>
+                        </a>
+                    {% endfor %}
+                </ul>
+            </div>
         </main>
     </body>
 </html>

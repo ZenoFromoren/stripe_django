@@ -16,4 +16,5 @@
 
 ### Запуск проекта
 ```cd stripe_project``` (из корневой папки)
+
 ```python manage.py runserver``` <br /><br />

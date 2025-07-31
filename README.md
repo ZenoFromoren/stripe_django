@@ -3,20 +3,20 @@
 ## Установка проекта и зависимостей
 
 ### Установка проекта
-```git clone https://github.com/ZenoFromoren/stripe_django.git``` <br /><br />
+`git clone https://github.com/ZenoFromoren/stripe_django.git` <br /><br />
 
 ### Установка зависимостей
 В папке с установленным проектом
 
-```python -m venv venv```
+```python -m venv venv
 
-```venv/Scripts/activate```
+venv/Scripts/activate
 
-```pip install -r requirements.txt``` <br /><br />
+pip install -r requirements.txt``` <br /><br />
 
 ### Запуск проекта
-```cd stripe_project``` (из корневой папки)
+`cd stripe_project` (из корневой папки)
 
-В папке ```stripe_project``` нужно создать файл ```.env``` по примеру ```.env.example```
+В папке `stripe_project` нужно создать файл `.env` по примеру `.env.example`
 
-```python manage.py runserver``` <br /><br />
+`python manage.py runserver` <br /><br />

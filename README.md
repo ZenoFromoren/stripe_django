@@ -8,7 +8,7 @@
 ### Установка зависимостей
 В папке с установленным проектом
 
-```
+``` {python} 
 python -m venv venv
 
 venv/Scripts/activate

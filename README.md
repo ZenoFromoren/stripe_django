@@ -1,6 +1,6 @@
-# Stripe Django <br /><br />
+# Stripe Django <br />
 
-## Установка проекта и зависимостей <br /><br />
+## Установка проекта и зависимостей <br />
 
 ### Установка проекта
 ```git clone https://github.com/ZenoFromoren/stripe_django.git``` <br /><br />
@@ -16,5 +16,7 @@
 
 ### Запуск проекта
 ```cd stripe_project``` (из корневой папки)
+
+В папке ```stripe_project``` нужно создать файл ```.env``` по примеру ```.env.example```
 
 ```python manage.py runserver``` <br /><br />

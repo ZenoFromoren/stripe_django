@@ -1,5 +1,7 @@
 # Stripe Django
 
+https://zeno.students.nomorepartiesco.ru/
+
 ## Установка проекта и зависимостей
 
 ### Установка проекта

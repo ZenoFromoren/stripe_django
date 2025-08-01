@@ -1,6 +1,6 @@
-# Stripe Django <br /><br />
+# Stripe Django
 
-## Установка проекта и зависимостей <br /><br />
+## Установка проекта и зависимостей
 
 ### Установка проекта
 `git clone https://github.com/ZenoFromoren/stripe_django.git` <br /><br />

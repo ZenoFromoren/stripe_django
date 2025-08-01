@@ -30,17 +30,17 @@ pip install -r requirements.txt
 ### GET `/buy/{id}`
 Возвращает `Stripe Session Id` для оплаты продукта с идентификатором `id`
 
-Возвращаемое значение: `{ checkout_session_id: str }`
+Возвращаемое значение: `{ checkout_session_id: str }` <br /><br />
 
 
 ### GET `/item/{id}`
-Возвращает HTML-страницу с информацией о товаре с идентификатором `id` с возможностью его купить
+Возвращает HTML-страницу с информацией о товаре с идентификатором `id` с возможностью его купить <br /><br />
 
 
 ### GET `/buy/order/{id}`
 Возвращает `Stripe Session Id` для оплаты заказа с идентификатором `id`
 
-Возвращаемое значение: `{ checkout_session_id: str }`
+Возвращаемое значение: `{ checkout_session_id: str }` <br /><br />
 
 
 ### GET `/order/{id}`
